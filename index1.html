@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weerbericht</title>
+        <meta charset="utf-8">
+      <meta name="author" content="LEERLING">
+      <meta name="keywords" content="weer, nederland, vandaag">
+      <meta name="description" content="Check het weer van vandaag op jouw locatie!">
+      
+    <link rel="stylesheet" type="text/css" href="style2.css"> 
+    <script type="text/javascript" src="instruct_buienradarLibrary_20190930.js"></script>
+    <script type="text/javascript">
+        
+   
+        
+      function showWeatherInfo() {
+          currentLocation_stationName("stationname");
+          forecast_iconurl("iconurlMorgen", 1.);
+          forecast_iconurl("iconurlOvermorgen", 2.);
+          forecast_minTemperature("minTempMorgen", 1.);
+          forecast_minTemperature("minTempOvermorgen", 2.);
+          forecast_maxTemperature("maxTempMorgen", 1.);
+          forecast_maxTemperature("maxTempOvermorgen", 2.);
+          forecast_mmRainMin("mmRainMinMorgen", 1.);
+          forecast_mmRainMin("mmRainMinOvermorgen", 2.);
+         forecast_mmRainMax("mmRainMaxMorgen", 1.);
+          forecast_mmRainMax("mmRainMaxOvermorgen", 2.);
+          forecast_rainChance("rainChanceMorgen", 1.);
+          forecast_rainChance("rainChanceOvermorgen", 2.);
+          forecast_weatherdescription("weatherdescriptionMorgen", 1.);
+          forecast_weatherdescription("weatherdescriptionOvermorgen", 2.);
+          forecast_sunChance("sunchanceMorgen", 1.);
+          forecast_sunChance("sunchanceOvermorgen", 2.);
+          
+          
+        
+          
+      }
+    </script>
+  </head>
+  <body>
+   <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <a href="voorpagina.html">
+				<h2 class="logo">Buienrader.</h2>
+				</a>
+					</div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="voorpagina.html">HOME</a></li>
+                    <li><a href="#">OVER</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">HULP</a></li>
+                    <li><a href="mailto:rayandiji@gmail.com">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Vragen?">
+                <a href="#"> <button class="btn">Zoek</button></a>
+				
+            </div>
+	   <body onload="loadBuienradarData(); getLocation();">
+      
+    
+      <h2><span id="stationname">===</span></h2>
+    <table>
+        <tr id="header">
+            <th></th>
+            <th>Morgen</th>
+            <th>Overmorgen</th>
+      
+             <tr>
+        <td>Omschrijving</td>
+        <td><span id="weatherdescriptionMorgen">===  </span><img id="iconurlMorgen"></td>
+        <td><span id="weatherdescriptionOvermorgen">===</span><img id="iconurlOvermorgen"></td>
+      </tr>
+      <tr>
+        <td>Zon verwachting</td>
+        <td><span id="sunchanceMorgen">...</span> % </td>
+        <td><span id="sunchanceOvermorgen">...</span> % </td>
+      <tr>
+      <td>Min temp</td>
+       <td><span id="minTempMorgen">...</span> &#8451; </td>
+       <td><span id="minTempOvermorgen">...</span> &#8451; </td>
+      </tr>
+      <tr>
+      <td>Max temp</td>
+       <td><span id="maxTempMorgen">...</span> &#8451; </td>
+       <td><span id="maxTempOvermorgen">...</span> &#8451; </td>
+      </tr>
+     <tr>
+		<td>Regen verwachting</td>
+		 <td><span id="rainChanceMorgen">...</span> % </td>
+		 <td><span id="rainChanceOvermorgen">...</span> % </td>
+		</tr>
+		<tr>
+		<td>min regen</td>
+		 <td><span id="mmRainMinMorgen">...</span> mm </td>
+		 <td><span id="mmRainMinOvermorgen">...</span> mm </td>
+		</tr>
+		<tr>
+		<td>max regen</td>
+		 <td><span id="mmRainMaxMorgen">...</span> mm </td>
+		 <td><span id="mmRainMaxOvermorgen">...</span> mm </td>
+		</tr>
+    
+		   
+		   
+		   
+		   </table>
+
+	</body>
+    
+</html>

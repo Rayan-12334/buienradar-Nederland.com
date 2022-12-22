@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weerbericht</title>
+        <meta charset="utf-8">
+      <meta name="author" content="LEERLING">
+      <meta name="keywords" content="weer, nederland, vandaag">
+      <meta name="description" content="Check het weer van vandaag op jouw locatie!">
+      <link rel="stylesheet" href="style3.css">
+      
+    <!---link rel="stylesheet" type="text/css" href="style.css"--->
+    <script type="text/javascript" src="instruct_buienradarLibrary_20190930.js"></script>
+    <script type="text/javascript">
+        
+    /* LET OP: dit is commentaar. Commentaar doet niets, wordt niet uitgevoerd of getoond */
+    /* in de regels hieronder zijn sommige regels ook commentaar. Dit is omdat de gegevens niet worden 
+    getoond als er functies niet worden aangeroepen. De functies die in de body niet worden aangeroepen 
+    zijn dus commentaar gemaakt. Als je de functies wilt gebruiken, haal dan de commentaartekens voor en 
+    achter de regels weg*/
+        
+      function showWeatherInfo() {
+                currentLocation_stationName("stationnaam");
+                currentLocation_temperature("temperatuur");
+                currentLocation_stationIconUrl("plaatje");
+                currentLocation_stationDescription("weertekst");
+                currentLocation_stationWindDirection("winddir");
+                currentLocation_stationWindSpeed("windspeed");
+                buienradar_map("radarbeeld");
+                date_showDate("datum");
+                time_showTime("tijd");
+      }
+    </script>
+  </head>
+  
+  <body onload="loadBuienradarData(); getLocation();">
+      <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <a href="voorpagina.html">
+				<h2 class="logo">Buienrader.</h2>
+				</a>
+					</div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="voorpagina.html">HOME</a></li>
+                    <li><a href="#">OVER</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">HULP</a></li>
+                    <li><a href="mailto:rayandiji@gmail.com">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="vragen?">
+                <a href="#"> <button class="btn">Zoek</button></a>
+				
+            </div>
+      
+     <table>
+        <tr id="header">
+         
+             <tr>
+        <td>stationnaam</td>
+        <td><span id="stationnaam"></span></td>
+      </tr>
+      <tr>
+        <td>temperatuur</td>
+		  <td><span id="temperatuur">...</span> &#8451; </td>
+      <tr>
+      <td>Toevoeging</td>
+		  <td><span id="weertekst">...</span> <img id="plaatje"> </td>
+      </tr>
+      <tr>
+      <td>Windrichting</td>
+		  <td><span id="winddir">...</span></td>
+      </tr>
+     <tr>
+		<td>windspeed</td>
+		 <td><span id="windspeed">...</span> m/s</td>
+		 </tr>
+		 <tr>
+		<td>datum</td>
+		 <td><span id="datum">...</span></td>
+		 </tr>
+		  <tr>
+		<td>tijdstip</td>
+		 <td><span id="tijd">...</span></td>
+		 </tr>
+    
+		   
+		   
+		   
+		   </table>
+
+			<div class="kaart">
+          <iframe id="radarbeeld" width=500 height=512>
+          </iframe>
+			</div>
+		  
+          </body>
+    
+    
+</html>
